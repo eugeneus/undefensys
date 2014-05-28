@@ -1,0 +1,13 @@
+$ cd /path/to/project/dir
+$ git init .
+$ git add .gitignore
+$ git add .
+$ git commit -a -m "Create Repo"
+$ git remote add origin https://bitbucket.org/yourname/yourrepo.git
+$ git push -u origin --all
+$ git push -u origin --tags
+
+cocos:
+project creation
+
+cocos new  undefensys -p com.stalkershome.undefensys -l cpp -d ~/tmp
