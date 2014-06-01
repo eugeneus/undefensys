@@ -69,6 +69,18 @@
 		D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620D132DFF430009C878 /* AVFoundation.framework */; };
 		D44C6210132DFF4E0009C878 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620F132DFF4E0009C878 /* AudioToolbox.framework */; };
 		D6B0611B1803AB670077942B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6B0611A1803AB670077942B /* CoreMotion.framework */; };
+		E0625F201937C35C005AE351 /* CEEntity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0625F1D1937C35C005AE351 /* CEEntity.cpp */; };
+		E0625F211937C35C005AE351 /* CEEntity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0625F1D1937C35C005AE351 /* CEEntity.cpp */; };
+		E0625F24193A601D005AE351 /* CEComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0625F22193A601D005AE351 /* CEComponent.cpp */; };
+		E0625F25193A601D005AE351 /* CEComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0625F22193A601D005AE351 /* CEComponent.cpp */; };
+		E0625F28193A6BFE005AE351 /* CEEntityManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0625F26193A6BFE005AE351 /* CEEntityManager.cpp */; };
+		E0625F29193A6BFE005AE351 /* CEEntityManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0625F26193A6BFE005AE351 /* CEEntityManager.cpp */; };
+		E0625F2C193BC4B9005AE351 /* CENode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0625F2A193BC4B9005AE351 /* CENode.cpp */; };
+		E0625F2D193BC4B9005AE351 /* CENode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0625F2A193BC4B9005AE351 /* CENode.cpp */; };
+		E0625F30193BC534005AE351 /* CESystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0625F2E193BC534005AE351 /* CESystem.cpp */; };
+		E0625F31193BC534005AE351 /* CESystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0625F2E193BC534005AE351 /* CESystem.cpp */; };
+		E0625F34193BC994005AE351 /* CESystemManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0625F32193BC994005AE351 /* CESystemManager.cpp */; };
+		E0625F35193BC994005AE351 /* CESystemManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0625F32193BC994005AE351 /* CESystemManager.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -267,6 +279,18 @@
 		D44C620D132DFF430009C878 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D44C620F132DFF4E0009C878 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		D6B0611A1803AB670077942B /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
+		E0625F1D1937C35C005AE351 /* CEEntity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CEEntity.cpp; sourceTree = "<group>"; };
+		E0625F1E1937C35C005AE351 /* CEEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEEntity.h; sourceTree = "<group>"; };
+		E0625F22193A601D005AE351 /* CEComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CEComponent.cpp; sourceTree = "<group>"; };
+		E0625F23193A601D005AE351 /* CEComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEComponent.h; sourceTree = "<group>"; };
+		E0625F26193A6BFE005AE351 /* CEEntityManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CEEntityManager.cpp; sourceTree = "<group>"; };
+		E0625F27193A6BFE005AE351 /* CEEntityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEEntityManager.h; sourceTree = "<group>"; };
+		E0625F2A193BC4B9005AE351 /* CENode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CENode.cpp; sourceTree = "<group>"; };
+		E0625F2B193BC4B9005AE351 /* CENode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CENode.h; sourceTree = "<group>"; };
+		E0625F2E193BC534005AE351 /* CESystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CESystem.cpp; sourceTree = "<group>"; };
+		E0625F2F193BC534005AE351 /* CESystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CESystem.h; sourceTree = "<group>"; };
+		E0625F32193BC994005AE351 /* CESystemManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CESystemManager.cpp; sourceTree = "<group>"; };
+		E0625F33193BC994005AE351 /* CESystemManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CESystemManager.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -485,9 +509,29 @@
 		E0625F1B1937B1EA005AE351 /* esf */ = {
 			isa = PBXGroup;
 			children = (
+				E0625F1C1937C35C005AE351 /* core */,
 			);
 			name = esf;
 			path = ../../esf;
+			sourceTree = "<group>";
+		};
+		E0625F1C1937C35C005AE351 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				E0625F32193BC994005AE351 /* CESystemManager.cpp */,
+				E0625F33193BC994005AE351 /* CESystemManager.h */,
+				E0625F2E193BC534005AE351 /* CESystem.cpp */,
+				E0625F2F193BC534005AE351 /* CESystem.h */,
+				E0625F2A193BC4B9005AE351 /* CENode.cpp */,
+				E0625F2B193BC4B9005AE351 /* CENode.h */,
+				E0625F26193A6BFE005AE351 /* CEEntityManager.cpp */,
+				E0625F27193A6BFE005AE351 /* CEEntityManager.h */,
+				E0625F22193A601D005AE351 /* CEComponent.cpp */,
+				E0625F23193A601D005AE351 /* CEComponent.h */,
+				E0625F1D1937C35C005AE351 /* CEEntity.cpp */,
+				E0625F1E1937C35C005AE351 /* CEEntity.h */,
+			);
+			path = core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -696,6 +740,12 @@
 			files = (
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				E0625F201937C35C005AE351 /* CEEntity.cpp in Sources */,
+				E0625F24193A601D005AE351 /* CEComponent.cpp in Sources */,
+				E0625F28193A6BFE005AE351 /* CEEntityManager.cpp in Sources */,
+				E0625F2C193BC4B9005AE351 /* CENode.cpp in Sources */,
+				E0625F34193BC994005AE351 /* CESystemManager.cpp in Sources */,
+				E0625F30193BC534005AE351 /* CESystem.cpp in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				1AFAF8B816D35DE700DB1158 /* HelloWorldScene.cpp in Sources */,
@@ -707,7 +757,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5087E75717EB910900C73F5D /* AppDelegate.cpp in Sources */,
+				E0625F25193A601D005AE351 /* CEComponent.cpp in Sources */,
+				E0625F31193BC534005AE351 /* CESystem.cpp in Sources */,
+				E0625F2D193BC4B9005AE351 /* CENode.cpp in Sources */,
+				E0625F35193BC994005AE351 /* CESystemManager.cpp in Sources */,
 				5087E75817EB910900C73F5D /* HelloWorldScene.cpp in Sources */,
+				E0625F211937C35C005AE351 /* CEEntity.cpp in Sources */,
+				E0625F29193A6BFE005AE351 /* CEEntityManager.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
