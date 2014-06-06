@@ -52,6 +52,28 @@ void CESystemManager::registerIdleEntities()
 void CESystemManager::updateSystemsNodes()
 {
    
+   CEComponentTypeBit reqTypesBitMask = 0;
+   
+   CESystem* system = NULL;
+   CEEntity* entity = NULL;
+   
+   for ( _itSystemPtr = this->_systems->begin(); _itSystemPtr != this->_systems->end(); ++_itSystemPtr ){
+      
+      while (reqTypesBitMask = (*_itSystemPtr)->getNextTypeSet()) {
+         //getNextTypeSet()  just returns the next typeSet, NULL if not found
+         while (entity = _entityManager->getNextEntity()) {
+            
+            if (entity->componentTypesBitMask() == reqTypesBitMask) {
+               (*_itSystemPtr)->registerEntity(entity);
+            }
+         }
+         
+      }
+   }
+
+   
+   _entityManager->commitActivation();
+   
 /*
    CCObject* pEntity = NULL;
    CCObject* pSystem = NULL;
@@ -75,7 +97,7 @@ void CESystemManager::updateSystemsNodes()
    }
 */
    // if procedure reach this point, cleanup idleEntities anyways
-   _entityManager->commitActivation();
+   
    
 }
 

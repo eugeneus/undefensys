@@ -13,6 +13,7 @@
 //#include "CEEntity.h"
 //#include "CENode.h"
 #include <vector>
+#include <map>
 
 class CEEntity;
 class CENode;
@@ -30,7 +31,7 @@ public:
     */
    virtual CEComponentTypeBit requiredComponentTypes();
    
-   /* @bref specific implementaion of System should pverride this to
+   /* @bref specific implementaion of System should override this to
     have ability create a specific Node from an Entity;
     */
    virtual void registerEntity(CEEntity* anEntity);
@@ -45,6 +46,8 @@ public:
 protected:
    
    std::vector<CENode*>* _nodes;
+   
+   std::map<CEComponentTypeBit, std::vector<CENode*>*>* _nodeSetsMap;
    
 private:
    
