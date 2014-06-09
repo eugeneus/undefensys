@@ -47,6 +47,21 @@ void CESystem::update(float dt)
    
 }
 
+int CESystem::getNodeSetsCount() 
+{
+   return _nodeSets->size();
+}
+
+CEComponentTypeBit CESystem::getNodeTypeSetByIndex(int anIndex)
+{
+   return (_nodeSets->at(anIndex)).componentsTypeSet;
+}
+
+void registerEntityForNodeTypeSetIndex(CEEntity* anIdleEntity, int anNodeTypeSetIndex)
+{
+
+}
+
 /*
 void CESystem::submitNode(CENode* aNode)
 {

@@ -18,6 +18,12 @@
 class CEEntity;
 class CENode;
 
+struct TNodeSetDescription
+{
+   CEComponentTypeBit componentsTypeSet;
+   std::vector<CENode*> nodes;
+};
+
 class CESystem
 {
 public:
@@ -43,9 +49,16 @@ public:
    
    //void submitNode(T* aNode);
    
+   int getNodeSetsCount();
+   CEComponentTypeBit getNodeTypeSetByIndex(int anIndex);
+   
+   virtual void registerEntityForNodeTypeSetIndex(CEEntity* anIdleEntity, int anNodeTypeSetIndex);
+   
 protected:
    
    std::vector<CENode*>* _nodes;
+   
+   std::vector<TNodeSetDescription>* _nodeSets;
    
    std::map<CEComponentTypeBit, std::vector<CENode*>*>* _nodeSetsMap;
    

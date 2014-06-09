@@ -53,6 +53,22 @@ CEEntitiesPtrVectorPtr CEEntityManager::idleEntities()
    return _iEntities;
 }
 
+int CEEntityManager::getIdleEntitiesCount()
+{
+   return _iEntities->size();
+}
+
+CEEntity* CEEntityManager::getIdleEntityByIndex(int anIdleEntityIndex)
+{
+   return (*_iEntities->begin()+anIdleEntityIndex);
+}
+
+void CEEntityManager::commitIdleEntityActivationByIndex(int anIdleEntityIndex)
+{
+   _aEntities->push_back(_iEntities->at(anIdleEntityIndex));
+   _iEntities->erase(_iEntities->begin()+anIdleEntityIndex);
+}
+
 //@brief removes entity from idle list.
 //      if entity is not found does nothing
 void CEEntityManager::commitActivation(CEEntity* anEntity)

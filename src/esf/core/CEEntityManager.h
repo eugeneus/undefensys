@@ -35,6 +35,10 @@ public:
    void addEntity(CEEntity* anEntity);
    
    void deleteEntity(CEEntity* anEntity);
+   
+   int getIdleEntitiesCount();
+   CEEntity* getIdleEntityByIndex(int anIdleEntityIndex);
+   void commitIdleEntityActivationByIndex(int anIdleEntityIndex);
 
    //@brief removes entity from idle list.
    //      if entity is not found does nothing

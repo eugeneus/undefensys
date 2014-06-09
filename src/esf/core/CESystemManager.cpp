@@ -48,7 +48,33 @@ void CESystemManager::registerIdleEntities()
 
 }
 
+int getIdleEntitiesCount();
+void commitIdleEntityActivationByIndex(int anIdleEntityIndex);
 
+void CESystemManager::updateSystemsNodes()
+{
+   CESystem* system = NULL;
+   CEEntity* entity = NULL;
+   
+   int idleEntitiesCount = _entityManager->getIdleEntitiesCount();
+   int nodeSetsCount = 0;
+   for (int iIdleEntity = 0; iIdleEntity < idleEntitiesCount; iIdleEntity++) {
+      entity = _entityManager->getIdleEntityByIndex(iIdleEntity);
+      for (_itSystemPtr = this->_systems->begin(); _itSystemPtr != this->_systems->end(); ++_itSystemPtr) {
+         system = (*_itSystemPtr);
+         nodeSetsCount = system->getNodeSetsCount();
+         for (int iNodeSet = 0; iNodeSet < nodeSetsCount; iNodeSet++) {
+            if (entity->componentTypesBitMask() == system->getNodeTypeSetByIndex(iNodeSet)) {
+               system->registerEntityForNodeTypeSetIndex(entity, iNodeSet);
+            }
+         }
+      }
+      _entityManager->commitIdleEntityActivationByIndex(iIdleEntity);
+   }
+
+}
+
+/*
 void CESystemManager::updateSystemsNodes()
 {
    
@@ -59,12 +85,14 @@ void CESystemManager::updateSystemsNodes()
    
    for ( _itSystemPtr = this->_systems->begin(); _itSystemPtr != this->_systems->end(); ++_itSystemPtr ){
       
+      (*_itSystemPtr)->resetItaratorCounter();
       while (reqTypesBitMask = (*_itSystemPtr)->getNextTypeSet()) {
          //getNextTypeSet()  just returns the next typeSet, NULL if not found
+         _entityManager->resetItaratorCounter();
          while (entity = _entityManager->getNextEntity()) {
             
             if (entity->componentTypesBitMask() == reqTypesBitMask) {
-               (*_itSystemPtr)->registerEntity(entity);
+               (*_itSystemPtr)->registerEntityForTypeSet(entity,);
             }
          }
          
@@ -74,7 +102,7 @@ void CESystemManager::updateSystemsNodes()
    
    _entityManager->commitActivation();
    
-/*
+
    CCObject* pEntity = NULL;
    CCObject* pSystem = NULL;
    int requiredComponents = 0;
@@ -95,11 +123,12 @@ void CESystemManager::updateSystemsNodes()
          }
       }
    }
-*/
+
    // if procedure reach this point, cleanup idleEntities anyways
    
    
 }
+*/
 
 void CESystemManager::update(float dt)
 {
