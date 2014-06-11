@@ -57,7 +57,7 @@ CEComponentTypeBit CESystem::getNodeTypeSetByIndex(int anIndex)
    return (_nodeSets->at(anIndex)).componentsTypeSet;
 }
 
-void registerEntityForNodeTypeSetIndex(CEEntity* anIdleEntity, int anNodeTypeSetIndex)
+void CESystem::registerEntityForNodeTypeSetIndex(CEEntity* anIdleEntity, int anNodeTypeSetIndex)
 {
 
 }
