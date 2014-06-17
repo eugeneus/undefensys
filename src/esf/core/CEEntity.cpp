@@ -8,8 +8,11 @@
 
 #include "CEEntity.h"
 
+int CEEntity::_nextEntityID = 0;
+
 CEEntity::CEEntity(void)
 :_componentTypesBitMask(0)
+,_entityID(-1)
 {
    _components = new std::vector<CEComponent*>();
 }
@@ -71,14 +74,17 @@ std::vector<CEComponent*>* CEEntity::componentsList(int componentsCount)
    return _components;
 }
 
-void CEEntity::setEntityID(int anEntityID)
-{
-   _entityID = anEntityID;
-}
-
 int CEEntity::getEntityID()
 {
+   if (this->_entityID < 0) {
+      this->_entityID = _getNextEntityID();
+   }
    return _entityID;
+}
+
+int CEEntity::_getNextEntityID()
+{
+   return _nextEntityID++;
 }
 
 

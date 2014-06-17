@@ -37,12 +37,13 @@ public:
    
    virtual std::vector<CEComponent*>* componentsList(int componentsCount); // fake parameter
    
-   /*@brief an Entity Manager uses these functions to set entity id which is equal to
-            index position in manager's vector(s)
-    */
-   virtual void setEntityID(int anEntityID);
-   
    virtual int getEntityID();
+   
+protected:
+   
+   static int _nextEntityID; // generates IDs for entities
+   
+   int _getNextEntityID(); // returns next available ID from static counter;
 
 private:
    
