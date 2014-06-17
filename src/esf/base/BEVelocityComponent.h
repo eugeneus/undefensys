@@ -14,15 +14,22 @@
 class BEVelocityComponent : public CEComponent
 {
 public:
-   BEVelocityComponent();
+   BEVelocityComponent(float aX = 0.0f, float aY = 0.0f,float aXmax = 0.0f, float aYmax = 0.0f);
    ~BEVelocityComponent();
-   static BEVelocityComponent* create(float avX, float avY);
+
+   virtual CEComponentTypeBit getCEComponentTypeBit();
+
 public:
    
-   float m_vX;  // in terms of cocos2d engine velosity is measured in points/sec
-   float m_vY;
-   float m_vXmax;
-   float m_vYmax;
+   float _vlX;  // in terms of cocos2d engine velosity is measured in points/sec
+   float _vlY;
+   float _vlXmax;
+   float _vlYmax;
+
+private:
+   
+   static CEComponentTypeBit _componentTypeBit;
+   
 };
 
 

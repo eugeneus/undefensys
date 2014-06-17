@@ -81,6 +81,20 @@
 		E08505A2194CA39100AAC5EE /* CESystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0850593194CA39100AAC5EE /* CESystem.cpp */; };
 		E08505A3194CA39100AAC5EE /* CESystemManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0850595194CA39100AAC5EE /* CESystemManager.cpp */; };
 		E08505A4194CA39100AAC5EE /* CESystemManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0850595194CA39100AAC5EE /* CESystemManager.cpp */; };
+		E0C7C4861950C2ED00899F27 /* BEAccelerationComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0C7C46A1950C2ED00899F27 /* BEAccelerationComponent.cpp */; };
+		E0C7C4871950C2ED00899F27 /* BEAIComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0C7C46C1950C2ED00899F27 /* BEAIComponent.cpp */; };
+		E0C7C4881950C2ED00899F27 /* BEEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0C7C46E1950C2ED00899F27 /* BEEngine.cpp */; };
+		E0C7C4891950C2ED00899F27 /* BEPathComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0C7C4701950C2ED00899F27 /* BEPathComponent.cpp */; };
+		E0C7C48A1950C2ED00899F27 /* BEPositionComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0C7C4721950C2ED00899F27 /* BEPositionComponent.cpp */; };
+		E0C7C48B1950C2ED00899F27 /* BERenderComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0C7C4741950C2ED00899F27 /* BERenderComponent.cpp */; };
+		E0C7C48C1950C2ED00899F27 /* BERotationActionComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0C7C4761950C2ED00899F27 /* BERotationActionComponent.cpp */; };
+		E0C7C48D1950C2ED00899F27 /* BESizeComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0C7C4781950C2ED00899F27 /* BESizeComponent.cpp */; };
+		E0C7C48E1950C2ED00899F27 /* BESpawnPositionComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0C7C47A1950C2ED00899F27 /* BESpawnPositionComponent.cpp */; };
+		E0C7C48F1950C2ED00899F27 /* BETargetComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0C7C47C1950C2ED00899F27 /* BETargetComponent.cpp */; };
+		E0C7C4901950C2ED00899F27 /* BETargetPositionComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0C7C47E1950C2ED00899F27 /* BETargetPositionComponent.cpp */; };
+		E0C7C4911950C2ED00899F27 /* BETargetPositonComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0C7C4801950C2ED00899F27 /* BETargetPositonComponent.cpp */; };
+		E0C7C4921950C2ED00899F27 /* BETeamTagComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0C7C4821950C2ED00899F27 /* BETeamTagComponent.cpp */; };
+		E0C7C4931950C2ED00899F27 /* BEVelocityComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0C7C4841950C2ED00899F27 /* BEVelocityComponent.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -291,6 +305,34 @@
 		E0850594194CA39100AAC5EE /* CESystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CESystem.h; sourceTree = "<group>"; };
 		E0850595194CA39100AAC5EE /* CESystemManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CESystemManager.cpp; sourceTree = "<group>"; };
 		E0850596194CA39100AAC5EE /* CESystemManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CESystemManager.h; sourceTree = "<group>"; };
+		E0C7C46A1950C2ED00899F27 /* BEAccelerationComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BEAccelerationComponent.cpp; sourceTree = "<group>"; };
+		E0C7C46B1950C2ED00899F27 /* BEAccelerationComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEAccelerationComponent.h; sourceTree = "<group>"; };
+		E0C7C46C1950C2ED00899F27 /* BEAIComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BEAIComponent.cpp; sourceTree = "<group>"; };
+		E0C7C46D1950C2ED00899F27 /* BEAIComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEAIComponent.h; sourceTree = "<group>"; };
+		E0C7C46E1950C2ED00899F27 /* BEEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BEEngine.cpp; sourceTree = "<group>"; };
+		E0C7C46F1950C2ED00899F27 /* BEEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEEngine.h; sourceTree = "<group>"; };
+		E0C7C4701950C2ED00899F27 /* BEPathComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BEPathComponent.cpp; sourceTree = "<group>"; };
+		E0C7C4711950C2ED00899F27 /* BEPathComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEPathComponent.h; sourceTree = "<group>"; };
+		E0C7C4721950C2ED00899F27 /* BEPositionComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BEPositionComponent.cpp; sourceTree = "<group>"; };
+		E0C7C4731950C2ED00899F27 /* BEPositionComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEPositionComponent.h; sourceTree = "<group>"; };
+		E0C7C4741950C2ED00899F27 /* BERenderComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BERenderComponent.cpp; sourceTree = "<group>"; };
+		E0C7C4751950C2ED00899F27 /* BERenderComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BERenderComponent.h; sourceTree = "<group>"; };
+		E0C7C4761950C2ED00899F27 /* BERotationActionComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BERotationActionComponent.cpp; sourceTree = "<group>"; };
+		E0C7C4771950C2ED00899F27 /* BERotationActionComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BERotationActionComponent.h; sourceTree = "<group>"; };
+		E0C7C4781950C2ED00899F27 /* BESizeComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BESizeComponent.cpp; sourceTree = "<group>"; };
+		E0C7C4791950C2ED00899F27 /* BESizeComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BESizeComponent.h; sourceTree = "<group>"; };
+		E0C7C47A1950C2ED00899F27 /* BESpawnPositionComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BESpawnPositionComponent.cpp; sourceTree = "<group>"; };
+		E0C7C47B1950C2ED00899F27 /* BESpawnPositionComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BESpawnPositionComponent.h; sourceTree = "<group>"; };
+		E0C7C47C1950C2ED00899F27 /* BETargetComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BETargetComponent.cpp; sourceTree = "<group>"; };
+		E0C7C47D1950C2ED00899F27 /* BETargetComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BETargetComponent.h; sourceTree = "<group>"; };
+		E0C7C47E1950C2ED00899F27 /* BETargetPositionComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BETargetPositionComponent.cpp; sourceTree = "<group>"; };
+		E0C7C47F1950C2ED00899F27 /* BETargetPositionComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BETargetPositionComponent.h; sourceTree = "<group>"; };
+		E0C7C4801950C2ED00899F27 /* BETargetPositonComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BETargetPositonComponent.cpp; sourceTree = "<group>"; };
+		E0C7C4811950C2ED00899F27 /* BETargetPositonComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BETargetPositonComponent.h; sourceTree = "<group>"; };
+		E0C7C4821950C2ED00899F27 /* BETeamTagComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BETeamTagComponent.cpp; sourceTree = "<group>"; };
+		E0C7C4831950C2ED00899F27 /* BETeamTagComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BETeamTagComponent.h; sourceTree = "<group>"; };
+		E0C7C4841950C2ED00899F27 /* BEVelocityComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BEVelocityComponent.cpp; sourceTree = "<group>"; };
+		E0C7C4851950C2ED00899F27 /* BEVelocityComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEVelocityComponent.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -502,6 +544,7 @@
 		E0850589194CA39100AAC5EE /* esf */ = {
 			isa = PBXGroup;
 			children = (
+				E0C7C4691950C2ED00899F27 /* base */,
 				E085058A194CA39100AAC5EE /* core */,
 			);
 			name = esf;
@@ -541,6 +584,41 @@
 			);
 			name = resources;
 			path = ../../resources;
+			sourceTree = "<group>";
+		};
+		E0C7C4691950C2ED00899F27 /* base */ = {
+			isa = PBXGroup;
+			children = (
+				E0C7C4721950C2ED00899F27 /* BEPositionComponent.cpp */,
+				E0C7C4731950C2ED00899F27 /* BEPositionComponent.h */,
+				E0C7C4741950C2ED00899F27 /* BERenderComponent.cpp */,
+				E0C7C4751950C2ED00899F27 /* BERenderComponent.h */,
+				E0C7C4841950C2ED00899F27 /* BEVelocityComponent.cpp */,
+				E0C7C4851950C2ED00899F27 /* BEVelocityComponent.h */,
+				E0C7C46A1950C2ED00899F27 /* BEAccelerationComponent.cpp */,
+				E0C7C46B1950C2ED00899F27 /* BEAccelerationComponent.h */,
+				E0C7C46C1950C2ED00899F27 /* BEAIComponent.cpp */,
+				E0C7C46D1950C2ED00899F27 /* BEAIComponent.h */,
+				E0C7C46E1950C2ED00899F27 /* BEEngine.cpp */,
+				E0C7C46F1950C2ED00899F27 /* BEEngine.h */,
+				E0C7C4701950C2ED00899F27 /* BEPathComponent.cpp */,
+				E0C7C4711950C2ED00899F27 /* BEPathComponent.h */,
+				E0C7C4761950C2ED00899F27 /* BERotationActionComponent.cpp */,
+				E0C7C4771950C2ED00899F27 /* BERotationActionComponent.h */,
+				E0C7C4781950C2ED00899F27 /* BESizeComponent.cpp */,
+				E0C7C4791950C2ED00899F27 /* BESizeComponent.h */,
+				E0C7C47A1950C2ED00899F27 /* BESpawnPositionComponent.cpp */,
+				E0C7C47B1950C2ED00899F27 /* BESpawnPositionComponent.h */,
+				E0C7C47C1950C2ED00899F27 /* BETargetComponent.cpp */,
+				E0C7C47D1950C2ED00899F27 /* BETargetComponent.h */,
+				E0C7C47E1950C2ED00899F27 /* BETargetPositionComponent.cpp */,
+				E0C7C47F1950C2ED00899F27 /* BETargetPositionComponent.h */,
+				E0C7C4801950C2ED00899F27 /* BETargetPositonComponent.cpp */,
+				E0C7C4811950C2ED00899F27 /* BETargetPositonComponent.h */,
+				E0C7C4821950C2ED00899F27 /* BETeamTagComponent.cpp */,
+				E0C7C4831950C2ED00899F27 /* BETeamTagComponent.h */,
+			);
+			path = base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -747,16 +825,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0C7C4881950C2ED00899F27 /* BEEngine.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
+				E0C7C4891950C2ED00899F27 /* BEPathComponent.cpp in Sources */,
+				E0C7C4931950C2ED00899F27 /* BEVelocityComponent.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				E0850599194CA39100AAC5EE /* CEComponent.cpp in Sources */,
+				E0C7C48B1950C2ED00899F27 /* BERenderComponent.cpp in Sources */,
+				E0C7C48D1950C2ED00899F27 /* BESizeComponent.cpp in Sources */,
+				E0C7C48F1950C2ED00899F27 /* BETargetComponent.cpp in Sources */,
 				E085059D194CA39100AAC5EE /* CEEntityManager.cpp in Sources */,
+				E0C7C48E1950C2ED00899F27 /* BESpawnPositionComponent.cpp in Sources */,
+				E0C7C48A1950C2ED00899F27 /* BEPositionComponent.cpp in Sources */,
+				E0C7C4921950C2ED00899F27 /* BETeamTagComponent.cpp in Sources */,
+				E0C7C4901950C2ED00899F27 /* BETargetPositionComponent.cpp in Sources */,
 				E085059F194CA39100AAC5EE /* CENode.cpp in Sources */,
 				E08505A3194CA39100AAC5EE /* CESystemManager.cpp in Sources */,
 				E08505A1194CA39100AAC5EE /* CESystem.cpp in Sources */,
+				E0C7C4861950C2ED00899F27 /* BEAccelerationComponent.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				E0C7C4871950C2ED00899F27 /* BEAIComponent.cpp in Sources */,
 				1AFAF8B816D35DE700DB1158 /* HelloWorldScene.cpp in Sources */,
+				E0C7C4911950C2ED00899F27 /* BETargetPositonComponent.cpp in Sources */,
+				E0C7C48C1950C2ED00899F27 /* BERotationActionComponent.cpp in Sources */,
 				E085059B194CA39100AAC5EE /* CEEntity.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

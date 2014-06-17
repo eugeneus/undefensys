@@ -8,19 +8,24 @@
 
 #include "BERenderComponent.h"
 
-BERenderComponent::BERenderComponent()
-:CEComponent(kCEComponentTypeRend)
-,m_sprite(NULL)
+CEComponentTypeBit BERenderComponent::_componentTypeBit = 0;
+
+BERenderComponent::BERenderComponent(cocos2d::Sprite* aSprite)
+:_pSprite(aSprite)
 {}
 
-BERenderComponent::~BERenderComponent(){}
-
-BERenderComponent* BERenderComponent::create(cocos2d::CCSprite* aSprite)
+BERenderComponent::~BERenderComponent()
 {
-   BERenderComponent* pComponent = new BERenderComponent();
-   pComponent->autorelease();
-   pComponent->m_sprite = aSprite;
-   pComponent->m_sprite->retain();
-   return pComponent;
+   //delete _pSprite;
 }
+
+CEComponentTypeBit BERenderComponent::getCEComponentTypeBit()
+{
+   if (!_componentTypeBit) {
+      _componentTypeBit = CEComponent::nextComponenTypeBit();
+   }
+   
+   return _componentTypeBit;
+}
+
 

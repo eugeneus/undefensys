@@ -1,13 +1,13 @@
 //
 //  BEPositionComponent.h
-//  Cocos2DxFirstIosSample
+//
 //
 //  Created by Eugene Johnson on 4/20/14.
 //
 //
 
-#ifndef __Cocos2DxFirstIosSample__BEPositionComponent__
-#define __Cocos2DxFirstIosSample__BEPositionComponent__
+#ifndef __ESF__BEPositionComponent__
+#define __ESF__BEPositionComponent__
 
 #include "CEComponent.h"
 
@@ -18,13 +18,22 @@ class BEPositionComponent : public CEComponent
 {
    
 public:
-   BEPositionComponent();
+   
+   BEPositionComponent(float aX = 0.0f, float aY = 0.0f);
+                       
    ~BEPositionComponent();
-   static BEPositionComponent* create(float aX, float aY);
+   
+   virtual CEComponentTypeBit getCEComponentTypeBit();
+   
 public:
-   float m_xPos;
-   float m_yPos;
+   float _x;
+   float _y;
+   
+private:
+   
+   static CEComponentTypeBit _componentTypeBit;
+   
    
 };
 
-#endif /* defined(__Cocos2DxFirstIosSample__BEPositionComponent__) */
+#endif /* defined(__ESF__BEPositionComponent__) */

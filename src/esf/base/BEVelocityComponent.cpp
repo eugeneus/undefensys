@@ -8,21 +8,23 @@
 
 #include "BEVelocityComponent.h"
 
-BEVelocityComponent::BEVelocityComponent()
-:CEComponent(kCEComponentTypeVel)
-,m_vX(0.0f)
-,m_vY(0.0f)
-,m_vXmax(0.0f)
-,m_vYmax(0.0f)
+CEComponentTypeBit BEVelocityComponent::_componentTypeBit = 0;
+
+BEVelocityComponent::BEVelocityComponent(float aX, float aY, float aXmax, float aYmax)
+:_vlX(aX)
+,_vlY(aY)
+,_vlXmax(aXmax)
+,_vlYmax(aYmax)
 {}
 
 BEVelocityComponent::~BEVelocityComponent(){}
 
-BEVelocityComponent* BEVelocityComponent::create(float avX, float avY)
+CEComponentTypeBit BEVelocityComponent::getCEComponentTypeBit()
 {
-   BEVelocityComponent* pComponent = new  BEVelocityComponent();
-   pComponent->m_vX = avX;
-   pComponent->m_vY = avY;
-   pComponent->autorelease();
-   return pComponent;
+   if (!_componentTypeBit) {
+      _componentTypeBit = CEComponent::nextComponenTypeBit();
+   }
+   
+   return _componentTypeBit;
 }
+

@@ -6,8 +6,8 @@
 //
 //
 
-#ifndef __Cocos2DxFirstIosSample__BERenderComponent__
-#define __Cocos2DxFirstIosSample__BERenderComponent__
+#ifndef __ESF__BERenderComponent__
+#define __ESF__BERenderComponent__
 
 #include "CEComponent.h"
 #include "cocos2d.h"
@@ -16,17 +16,20 @@ class BERenderComponent : public CEComponent
 {
 public:
    
-	BERenderComponent();
+	BERenderComponent(cocos2d::Sprite* aSprite = NULL);
 	~BERenderComponent();
-   
-	/* @brief
-    */
-   static BERenderComponent* create(cocos2d::CCSprite* aSprite);
-   
+
+   virtual CEComponentTypeBit getCEComponentTypeBit();
+
 public:
    
-   cocos2d::CCSprite* m_sprite;
+   cocos2d::Sprite* _pSprite;
+
+private:
+   
+   static CEComponentTypeBit _componentTypeBit;
+   
 };
 
 
-#endif /* defined(__Cocos2DxFirstIosSample__BERenderComponent__) */
+#endif /* defined(__ESF__BERenderComponent__) */

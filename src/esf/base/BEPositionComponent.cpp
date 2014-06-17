@@ -8,21 +8,21 @@
 
 #include "BEPositionComponent.h"
 
-BEPositionComponent::BEPositionComponent()
-:CEComponent(kCEComponentTypePos)
-,m_xPos(0.0f)
-,m_yPos(0.0f)
-{}
+CEComponentTypeBit BEPositionComponent::_componentTypeBit = 0;
 
+BEPositionComponent::BEPositionComponent(float aX, float aY)
+:_x(aX)
+,_y(aY)
+{}
 
 BEPositionComponent::~BEPositionComponent(){}
 
-BEPositionComponent* BEPositionComponent::create(float aX, float aY)
+CEComponentTypeBit BEPositionComponent::getCEComponentTypeBit()
 {
-   BEPositionComponent* pComponent = new  BEPositionComponent();
-   pComponent->m_xPos = aX;
-   pComponent->m_yPos = aY;
-   pComponent->autorelease();
-   return pComponent;
+   if (!_componentTypeBit) {
+      _componentTypeBit = CEComponent::nextComponenTypeBit();
+   }
+   
+   return _componentTypeBit;
 }
 
