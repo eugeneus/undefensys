@@ -1,13 +1,13 @@
 //
 //  BEVelocityComponent.h
-//  Cocos2DxFirstIosSample
+//  ESF (Entity System Foundation)
 //
 //  Created by Eugene Johnson on 4/20/14.
 //
 //
 
-#ifndef __Cocos2DxFirstIosSample__BEVelocityComponent__
-#define __Cocos2DxFirstIosSample__BEVelocityComponent__
+#ifndef __ESF__BEVelocityComponent__
+#define __ESF__BEVelocityComponent__
 
 #include "CEComponent.h"
 
@@ -15,6 +15,7 @@ class BEVelocityComponent : public CEComponent
 {
 public:
    BEVelocityComponent(float aX = 0.0f, float aY = 0.0f,float aXmax = 0.0f, float aYmax = 0.0f);
+   
    ~BEVelocityComponent();
 
    virtual CEComponentTypeBit getCEComponentTypeBit();
@@ -33,4 +34,4 @@ private:
 };
 
 
-#endif /* defined(__Cocos2DxFirstIosSample__BEVelocityComponent__) */
+#endif /* defined(__ESF__BEVelocityComponent__) */

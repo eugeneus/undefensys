@@ -1,25 +1,22 @@
 //
 //  BEEngine.h
-//  Cocos2DxFirstIosSample
+//  ESF (Entity System Foundation)
 //
 //  Created by Eugene Johnson on 4/20/14.
 //
-//
+//  Facade of ESF
 
-#ifndef __Cocos2DxFirstIosSample__BEEngine__
-#define __Cocos2DxFirstIosSample__BEEngine__
+#ifndef __ESF__BEEngine__
+#define __ESF__BEEngine__
 
-#include "CCObject.h"
-#include "cocos2d.h"
 
 class CESystemManager;
 class CEEntityManager;
+class CEEntity;
+class CESystem;
 
 class BEEngine
 {
-private:
-   CEEntityManager* m_em;
-   CESystemManager* m_sm;
 public:
    
    BEEngine();
@@ -27,8 +24,17 @@ public:
    
    static BEEngine* createWithInitalCapacity(unsigned int aCapacity);
    
-   virtual void update(float dt);
+   void addEntity(CEEntity* anEntity);
+   
+   void addSystem(CESystem* aSystem);
+   
+   void update(float dt);
+
+private:
+   
+   CEEntityManager* _pEm;
+   CESystemManager* _pSm;
    
 };
 
-#endif /* defined(__Cocos2DxFirstIosSample__BEEngine__) */
+#endif /* defined(__ESF__BEEngine__) */

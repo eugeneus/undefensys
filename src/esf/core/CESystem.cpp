@@ -1,6 +1,6 @@
 //
 //  CESystem.cpp
-//  Cocos2DxFirstIosSample
+//  ESF (Entity System Foundation)
 //
 //  Created by Eugene Johnson on 4/20/14.
 //
