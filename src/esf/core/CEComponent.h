@@ -42,8 +42,4 @@ protected:
 
 };
 
-//
-
-
-
 #endif /* defined(__ESF__CEComponent__) */

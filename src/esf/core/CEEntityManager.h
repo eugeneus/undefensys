@@ -32,27 +32,26 @@ public:
    
    static CEEntityManager* createWithInitalCapacity(unsigned int anEntities);
    
+   //@brief add an Entity to the list of "Idle Entities",
+   //      which are not processed by systems
    void addEntity(CEEntity* anEntity);
    
    void deleteEntity(CEEntity* anEntity);
    
+   //@bries This method is called by system manager only.
+   //       returns number of "Idle Entities"
    int getIdleEntitiesCount();
+   
+   //@brief This method is called by system manager only.
+   //        returns pointer to an Idle instance by the idex
    CEEntity* getIdleEntityByIndex(int anIdleEntityIndex);
+   
+   //@brief This method is called by system manager only.
+   //       System manager call this to let know that
+   //       Idle Entity has been registered by System
+   //       and can be moved from Idle to Active list
    void commitIdleEntityActivationByIndex(int anIdleEntityIndex);
-
-   //@brief removes entity from idle list.
-   //      if entity is not found does nothing
-   void commitActivation(CEEntity* anEntity);
-
-   //@brief removes entity from idle list by arrayindex.
-   //      if entity is not found or index is wrong does nothing
-   void commitActivation(unsigned int anEntityIndex);
    
-   //@brief clears idle Entity array
-   void commitActivation(void);
-   
-   //@brief returns copy of idle Entities array
-   CEEntitiesPtrVectorPtr idleEntities(); // idleEntities
 
 private:
    

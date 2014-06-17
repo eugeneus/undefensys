@@ -43,13 +43,10 @@ void CESystemManager::cleanUpSystems(void)
    
 }
 
-void CESystemManager::registerIdleEntities()
-{
+//void CESystemManager::registerIdleEntities()
+//{
 
-}
-
-int getIdleEntitiesCount();
-void commitIdleEntityActivationByIndex(int anIdleEntityIndex);
+//}
 
 void CESystemManager::updateSystemsNodes()
 {
@@ -73,62 +70,6 @@ void CESystemManager::updateSystemsNodes()
    }
 
 }
-
-/*
-void CESystemManager::updateSystemsNodes()
-{
-   
-   CEComponentTypeBit reqTypesBitMask = 0;
-   
-   CESystem* system = NULL;
-   CEEntity* entity = NULL;
-   
-   for ( _itSystemPtr = this->_systems->begin(); _itSystemPtr != this->_systems->end(); ++_itSystemPtr ){
-      
-      (*_itSystemPtr)->resetItaratorCounter();
-      while (reqTypesBitMask = (*_itSystemPtr)->getNextTypeSet()) {
-         //getNextTypeSet()  just returns the next typeSet, NULL if not found
-         _entityManager->resetItaratorCounter();
-         while (entity = _entityManager->getNextEntity()) {
-            
-            if (entity->componentTypesBitMask() == reqTypesBitMask) {
-               (*_itSystemPtr)->registerEntityForTypeSet(entity,);
-            }
-         }
-         
-      }
-   }
-
-   
-   _entityManager->commitActivation();
-   
-
-   CCObject* pEntity = NULL;
-   CCObject* pSystem = NULL;
-   int requiredComponents = 0;
-   int existingComponents = 0;
-   
-   cocos2d::CCArray* inactiveEntities = m_entityManager->idleEntities();
-   
-   if (inactiveEntities && inactiveEntities->count() > 0) {
-      CCARRAY_FOREACH(m_systems, pSystem){
-         requiredComponents = ((EISystem*)pSystem)->requiredComponentTypes();
-         CCARRAY_FOREACH(inactiveEntities, pEntity){
-            existingComponents = ((CEEntity*)pEntity)->componentTypes();
-            
-            if ((existingComponents & requiredComponents) == requiredComponents) {
-               ((EISystem*)pSystem)->registerEntity(((CEEntity*)pEntity));
-               //m_entityManager->commitActivation(((CEEntity*)pEntity)); bug: do not allow registration fo rmultiple systems
-            }
-         }
-      }
-   }
-
-   // if procedure reach this point, cleanup idleEntities anyways
-   
-   
-}
-*/
 
 void CESystemManager::update(float dt)
 {

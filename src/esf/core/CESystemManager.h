@@ -36,7 +36,7 @@ private:
    std::vector<CESystem*>* _systems;
    typename std::vector<CESystem*>::const_iterator _itSystemPtr;
    void updateSystemsNodes();
-   void registerIdleEntities();
+   //void registerIdleEntities();
    
    
 };
