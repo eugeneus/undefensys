@@ -5,6 +5,50 @@
 	<key>frames</key>
 	<dict>
 		
+		<key>btn_menu.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{0, 0}, {40, 40}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{40, 40}</string>
+			<key>spriteSourceSize</key>
+			<string>{40, 40}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{0, 964}, {40, 40}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>menu_bg.png</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+			
+			</array>
+			<key>spriteColorRect</key>
+			<string>{{0, 0}, {400, 400}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{400, 400}</string>
+			<key>spriteSourceSize</key>
+			<string>{400, 400}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1836, 952}, {400, 400}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
 		<key>tree_type11.png</key>
 		<dict>
 			<key>aliases</key>
@@ -44,7 +88,7 @@
 			<key>spriteTrimmed</key>
 			<true/>
 			<key>textureRect</key>
-			<string>{{620, 0}, {606, 962}}</string>
+			<string>{{1228, 0}, {606, 962}}</string>
 			<key>textureRotated</key>
 			<false/>
 		</dict>
@@ -88,7 +132,7 @@
 			<key>spriteTrimmed</key>
 			<true/>
 			<key>textureRect</key>
-			<string>{{1228, 0}, {606, 962}}</string>
+			<string>{{620, 0}, {606, 962}}</string>
 			<key>textureRotated</key>
 			<false/>
 		</dict>
@@ -111,11 +155,11 @@
 			<key>name</key>
 			<string>default</string>
 			<key>textureFileName</key>
-			<string>place_default</string>
+			<string>place</string>
 			<key>textureFileExtension</key>
 			<string>.png</string>
 			<key>coordinatesFileName</key>
-			<string>place_default</string>
+			<string>place</string>
 			<key>coordinatesFileExtension</key>
 			<string>.plist</string>
 			<key>premultipliedAlpha</key>

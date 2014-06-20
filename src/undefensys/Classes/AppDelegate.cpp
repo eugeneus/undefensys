@@ -28,10 +28,10 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     // create a scene. it's an autorelease object
     auto scene = MainMenu::createScene();
-
+    
     // run
-    director->runWithScene(scene);
-
+    director->runWithScene(scene);    
+    
     return true;
 }
 
