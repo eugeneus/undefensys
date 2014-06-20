@@ -1,5 +1,6 @@
 
 #include "GameSelectMenu.h"
+#include "SelectGameLayer.h"
 
 USING_NS_CC;
 
@@ -32,4 +33,7 @@ void GameSelectMenu::initializeMenu() {
     super::initializeMenu();
     
     CCLOG("Select menu");
+    
+    auto slider = SelectGameLayer::create();
+    this->addChild(slider);
 }
