@@ -1,13 +1,13 @@
 //
 //  BETargetPositonComponent.h
-//  Cocos2DxFirstIosSample
+//  ESF (Entity System Foundation)
 //
 //  Created by Eugene Johnson on 5/3/14.
 //
 //
 
-#ifndef __Cocos2DxFirstIosSample__BETargetPositonComponent__
-#define __Cocos2DxFirstIosSample__BETargetPositonComponent__
+#ifndef __ESF__BETargetPositonComponent__
+#define __ESF__BETargetPositonComponent__
 
 #include "CEComponent.h"
 
@@ -17,11 +17,18 @@ public:
    BETargetPositonComponent(float anEndX = 0.0f, float anEndY = 0.0f);
    ~BETargetPositonComponent();
    static BETargetPositonComponent* create(float anEndX = 0.0f, float anEndY = 0.0f);
+   virtual CEComponentTypeBit getCEComponentTypeBit();
 public:
    float m_endX;
    float m_endY;
    
+   
+private:
+   
+   static CEComponentTypeBit _componentTypeBit;
+
+   
 };
 
 
-#endif /* defined(__Cocos2DxFirstIosSample__BETargetPositonComponent__) */
+#endif /* defined(__ESF__BETargetPositonComponent__) */
