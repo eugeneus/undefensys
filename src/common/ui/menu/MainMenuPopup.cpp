@@ -53,6 +53,10 @@ bool MainMenuPopup::init(bool isStartMenu)
     
     cocos2d::Vector<cocos2d::MenuItem*> menuItems;
     
+    Sprite *bg = Sprite::createWithSpriteFrameName("popup_bg.png");
+    bg->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
+    this->addChild(bg, -1);
+    
     initMenuItems(menuItems, "Continue", CC_CALLBACK_1(MainMenuPopup::menuCloseCallback, this));
     initMenuItems(menuItems, "Select game", CC_CALLBACK_1(MainMenuPopup::menuSelectGameCallback, this));
     initMenuItems(menuItems, "Options", CC_CALLBACK_1(MainMenuPopup::menuOptionsCallback, this));

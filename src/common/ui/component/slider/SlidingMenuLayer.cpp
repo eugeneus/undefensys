@@ -3,10 +3,10 @@
 
 USING_NS_CC;
 
-SlidingMenuLayer* SlidingMenuLayer::create()
+SlidingMenuLayer* SlidingMenuLayer::create(int rowsCount, bool isVertical)
 {
     SlidingMenuLayer *pRet = new SlidingMenuLayer();
-    if (pRet && pRet->init())
+    if (pRet && pRet->init(rowsCount, isVertical))
     {
         pRet->autorelease();
         return pRet;
@@ -19,12 +19,16 @@ SlidingMenuLayer* SlidingMenuLayer::create()
     }
 }
 
-bool SlidingMenuLayer::init()
+bool SlidingMenuLayer::init(int pRowsCount, bool pIsVertical)
 {
     if ( !Layer::init() )
     {
         return false;
     }
+    
+    isVertical = pIsVertical;
+    rowsCount = pRowsCount;
+    int itemsCount = 10;
     
     pScreenSize = Director::getInstance()->getWinSize();
     generalscalefactor = pScreenSize.height / 500 ;
@@ -32,25 +36,38 @@ bool SlidingMenuLayer::init()
     scrollView = cocos2d::extension::ScrollView::create(Size::ZERO);
     scrollView->setBounceable(true);
     scrollView->setClippingToBounds(true);
-    scrollView->setDirection(cocos2d::extension::ScrollView::Direction::HORIZONTAL);
+    scrollView->setDirection(isVertical ?  cocos2d::extension::ScrollView::Direction::VERTICAL : cocos2d::extension::ScrollView::Direction::HORIZONTAL);
     this->addChild(scrollView, 218, SCROLLVIEW_TAG);
     
     Sprite* tilebox = Sprite::createWithSpriteFrameName("menu_bg.png");
-    float newWidth = tilebox->getContentSize().width;
-    //tilescale = 1.5f * generalscalefactor ;
+    float itemLength = isVertical ? tilebox->getContentSize().height : tilebox->getContentSize().width;
+    
+    
+    int colsCount = rowsCount > 1 ? itemsCount/rowsCount : 1;
+    
+    
     for (int i=0 ; i < 10 ; i++){
-        
-        
         std::stringstream ss;
         ss << "Game, N " << i;
         
         auto item = SlidingMenuItem::create(ss.str(), i);
-        item->setPosition(Vec2(i * newWidth + 30, pScreenSize.height/2 - (tilebox->getContentSize().height *tilescale)/2.0f));
+        
+        float itemPositionSideTmp = i * itemLength + 30 + itemLength/2;
+        float itemPositionSide = isVertical ? pScreenSize.height - itemPositionSideTmp : itemPositionSideTmp;
+        
+        
+        Vec2 position = isVertical ? Vec2(pScreenSize.width/2 - (tilebox->getContentSize().width *tilescale)/2.0f, itemPositionSide) : Vec2(itemPositionSide, pScreenSize.height/2 - (tilebox->getContentSize().height *tilescale)/2.0f);
+        
+        item->setPosition(position);
         scrollView->addChild(item, 1, i);
     }
     
     scrollView->setViewSize(Size(pScreenSize.width, pScreenSize.height ));
-    scrollView->setContentSize(Size((newWidth + 30)* (10 + 1), pScreenSize.height ));
+    Size scrollContentSize = isVertical ? Size(pScreenSize.width, (itemLength + 30) * 10) : Size((itemLength + 30)* 10, pScreenSize.height);
+    scrollView->setContentSize(scrollContentSize);
+    
+  //  if (isVertical)  scrollView->setPosition(Vec2(scrollContentSize.width/2 , itemLength - scrollContentSize.height/2 * 1.0/(10 + 1)));
+    
     
     auto listener = EventListenerTouchAllAtOnce::create();
     listener->onTouchesEnded = CC_CALLBACK_2(SlidingMenuLayer::onTouchesEnded, this);
@@ -76,7 +93,7 @@ void SlidingMenuLayer::onTouchesEnded(const std::vector<Touch*>& touches, Event 
             for (int i = 0 ; i < container->getChildren().size() ; i++){
                 SlidingMenuItem *backsprite = (SlidingMenuItem *)container->getChildByTag(i);
                 spritePos = Rect(
-                                    (backsprite->getPosition().x + container->getPosition().x ) ,
+                                    (backsprite->getPosition().x + container->getPosition().x) ,
                                     backsprite->getPosition().y ,
                                     backsprite->getContentSize().width ,
                                     backsprite->getContentSize().height );

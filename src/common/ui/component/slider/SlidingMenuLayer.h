@@ -17,11 +17,15 @@ private:
     cocos2d::Vec2 endlocation;   //keep track of touch ending point
     float tilescale ;
     float generalscalefactor = 0.0f ;
+    
+    
+    bool isVertical = false;
+    int rowsCount = 1;
 
     
 public:
-    static SlidingMenuLayer* create();
-    virtual bool init();
+    static SlidingMenuLayer* create(int rowsCount, bool isVertical);
+    virtual bool init(int rowsCount, bool isVertical);
     
     virtual void onTouchesEnded(const std::vector<cocos2d::Touch*>& touches, cocos2d::Event::Event *unused_event);
     //virtual void registerWithTouchDispatcher();

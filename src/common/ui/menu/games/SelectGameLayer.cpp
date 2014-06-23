@@ -26,7 +26,7 @@ bool SelectGameLayer::init()
         return false;
     }
     
-    auto slider = SlidingMenuLayer::create();
+    auto slider = SlidingMenuLayer::create(2, false);
     this->addChild(slider);
     
     return true;
