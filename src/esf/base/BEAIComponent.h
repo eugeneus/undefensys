@@ -1,13 +1,13 @@
 //
 //  BEAIComponent.h
-//  Cocos2DxFirstIosSample
+//  ESF (Entity System Foundation)
 //
 //  Created by Eugene Johnson on 4/20/14.
 //
 //
 
-#ifndef __Cocos2DxFirstIosSample__BEAIComponent__
-#define __Cocos2DxFirstIosSample__BEAIComponent__
+#ifndef __ESF__BEAIComponent__
+#define __ESF__BEAIComponent__
 
 #include "CEComponent.h"
 
@@ -22,11 +22,16 @@ public:
    BEAIComponent();
    ~BEAIComponent();
    static BEAIComponent* create();
+   virtual CEComponentTypeBit getCEComponentTypeBit();
 public:
    
    // should be a set of AI properties?
    
+private:
+   
+   static CEComponentTypeBit _componentTypeBit;
+   
 };
 
 
-#endif /* defined(__Cocos2DxFirstIosSample__BEAIComponent__) */
+#endif /* defined(__ESF__BEAIComponent__) */

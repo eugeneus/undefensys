@@ -7,6 +7,7 @@
 //
 
 #include "CEEntity.h"
+#include <assert.h>
 
 int CEEntity::_nextEntityID = 0;
 
@@ -19,6 +20,8 @@ CEEntity::CEEntity(void)
 
 CEEntity::~CEEntity(void)
 {
+   //TODO: memory management.
+   //       first destruct each component, then call clear?
    _components->clear();
    delete _components;
 }
@@ -38,7 +41,6 @@ void CEEntity::addComponent(CEComponent* aComponent)
    _componentTypesBitMask = _componentTypesBitMask | componentTypeBit;
    _components->push_back(aComponent);
    
-   
 }
 
 CEComponent* CEEntity::componentByType(CEComponentTypeBit aComponentTypeBit)
@@ -57,12 +59,10 @@ CEComponent* CEEntity::componentByType(CEComponentTypeBit aComponentTypeBit)
 
 }
 
-
 void CEEntity::removeComponentOfType(CEComponentTypeBit aComponentTypeBit)
 {
-
+   assert(false);
 }
-
 
 CEComponentTypeBit CEEntity::componentTypesBitMask()
 {

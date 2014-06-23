@@ -1,13 +1,13 @@
 //
 //  BETargetComponent.h
-//  Cocos2DxFirstIosSample
+//  ESF (Entity System Foundation)
 //
 //  Created by Eugene Johnson on 4/20/14.
 //
 //
 
-#ifndef __Cocos2DxFirstIosSample__BETargetComponent__
-#define __Cocos2DxFirstIosSample__BETargetComponent__
+#ifndef __ESF__BETargetComponent__
+#define __ESF__BETargetComponent__
 
 #include "CEComponent.h"
 
@@ -21,11 +21,17 @@ public:
    BETargetComponent();
    ~BETargetComponent();
    static BETargetComponent* create();
+   virtual CEComponentTypeBit getCEComponentTypeBit();
 public:
    float m_xPos;
    float m_yPos;
    
+private:
+   
+   static CEComponentTypeBit _componentTypeBit;
+
+   
 };
 
 
-#endif /* defined(__Cocos2DxFirstIosSample__BETargetComponent__) */
+#endif /* defined(__ESF__BETargetComponent__) */

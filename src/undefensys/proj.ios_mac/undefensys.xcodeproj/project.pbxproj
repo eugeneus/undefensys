@@ -505,6 +505,8 @@
 		AA7E029F1953CFD500EDC049 /* options */ = {
 			isa = PBXGroup;
 			children = (
+				E0C7C4961951B90500899F27 /* UNEntityFactory.cpp */,
+				E0C7C4971951B90500899F27 /* UNEntityFactory.h */,
 			);
 			path = options;
 			sourceTree = "<group>";

@@ -1,13 +1,13 @@
 //
 //  BEAccelerationComponent.h
-//  Cocos2DxFirstIosSample
+//  ESF (Entity System Foundation)
 //
 //  Created by Eugene Johnson on 4/22/14.
 //
 //
 
-#ifndef __Cocos2DxFirstIosSample__BEAccelerationComponent__
-#define __Cocos2DxFirstIosSample__BEAccelerationComponent__
+#ifndef __ESF__BEAccelerationComponent__
+#define __ESF__BEAccelerationComponent__
 
 #include "CEComponent.h"
 
@@ -17,11 +17,17 @@ public:
    BEAccelerationComponent();
    ~BEAccelerationComponent();
    static BEAccelerationComponent* create();
+   virtual CEComponentTypeBit getCEComponentTypeBit();
 public:
    float m_x;
    float m_y;
+
+private:
+   
+   static CEComponentTypeBit _componentTypeBit;
+
 };
 
 
 
-#endif /* defined(__Cocos2DxFirstIosSample__BEAccelerationComponent__) */
+#endif /* defined(__ESF__BEAccelerationComponent__) */
